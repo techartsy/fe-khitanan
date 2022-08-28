@@ -1,7 +1,7 @@
 import React from 'react';
 import _ from 'lodash';
 import piguraTop from '../../static/images/piguraTop.png';
-import gunungan from '../../static/images/pigura.png';
+import gunungan from '../../static/images/gunungan.png';
 import piguraBottom from '../../static/images/piguraBottom.png';
 import classes from './style.module.scss';
 

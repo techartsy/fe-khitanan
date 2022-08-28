@@ -26,8 +26,9 @@
       width: 100%;
     }
     .top {
-      width: 50%;
-      margin-top: 3%;
+      // border: 1px solid red;
+      width: 65%;
+      // margin-top: 3%;
       @include apply-at-lg-size {
         width: 60%;
         margin-bottom: 5%;
