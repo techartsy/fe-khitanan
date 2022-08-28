@@ -1,0 +1,88 @@
+@import "../../styles/base";
+
+.container {
+  @include body;
+  @include directionY;
+  background-color: #222222;
+  height: 100vh;
+  overflow-y: hidden;
+  @include apply-at-lg-size {
+    @include directionY;
+    align-items: center;
+    @include content-center;
+  }
+  .wraper {
+    @include directionY;
+    align-items: center;
+    justify-content: space-between;
+    @include apply-at-lg-size {
+      max-width: 360px;
+      height: 100%;
+    }
+    @include apply-at-sm-size {
+      overflow-y: hidden;
+    }
+    .pigura {
+      width: 100%;
+    }
+    .top {
+      width: 50%;
+      margin-top: 3%;
+      @include apply-at-lg-size {
+        width: 60%;
+        margin-bottom: 5%;
+      }
+    }
+    @include apply-at-sm-size {
+      width: 100%;
+    }
+    .toWraper {
+      font-size: 20px;
+      @include directionY;
+      align-items: center;
+      justify-content: center;
+      @include apply-at-sm-md-size {
+        font-size: 16px;
+        position: relative;
+        z-index: 2;
+      }
+      .to {
+        margin: -14px 0;
+      }
+    }
+    .btn {
+      width: 180px;
+      margin-top: 5%;
+      height: 40px;
+      font-size: 18px;
+      @include content-center;
+      @include directionX;
+      align-items: center;
+      justify-content: center;
+      border-radius: 6px;
+      background-color: $color-gold;
+      color: $color-black;
+      cursor: pointer;
+      @include apply-at-sm-md-size {
+        font-size: 14px;
+        min-width: 110px;
+        margin-top: 4%;
+        margin-bottom: 5%;
+        position: relative;
+        z-index: 1;
+      }
+    }
+    .bottom {
+      @include apply-at-lg-size {
+        width: 360px;
+      }
+      @include apply-at-sm-md-size {
+        position: fixed;
+        bottom: 0px;
+        z-index: 0;
+      }
+      width: 100%;
+    }
+  }
+  
+}

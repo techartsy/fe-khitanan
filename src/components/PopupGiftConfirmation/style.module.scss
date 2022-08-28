@@ -1,0 +1,199 @@
+@import "../../styles/base";
+
+.popupWrapper {
+  @include body;
+  color: $color-gold;
+  padding: 0 20px;
+  @include apply-at-sm-md-size {
+    padding: 0 5px;
+  }
+  .closeIcon {
+    position: absolute;
+    top: 2%;
+    right: 2%;
+    background-color: $color-gold;
+    cursor: pointer;
+    width: 25px;
+    text-align: center;
+    border-radius: 50%;
+    color: $color-black;
+    opacity: 0.8;
+    @include apply-at-sm-md-size {
+      right: 3%;
+    }
+  }
+
+  .popupTitleWrapper {
+    color: $color-gold;
+    font-size: 15px;
+    text-align: center;
+    text-decoration-line: underline;
+    text-underline-offset: 12px;
+    p {
+      @include apply-at-sm-md-size {
+        margin-top: -1px;
+      }
+    }
+    .headerImg {
+      width: 80px;
+    }
+  }
+  .subtitle {
+    @include directionX;
+    @include content-center;
+    font-size: 12px;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 2%;
+    @include apply-at-sm-md-size {
+      text-align: center;
+    }
+  }
+  .form {
+    @include directionY;
+    color: $color-gold;
+    .separate {
+      @include directionX;
+      justify-content: space-between;
+      @include apply-at-sm-md-size {
+        @include directionY;
+      }
+      .column {
+        @include directionY;
+        input {
+          @include body;
+          color: $color-gold;
+          padding-left: 15px;
+          width: 220px;
+          height: 25px;
+          margin-top: 1%;
+          margin-bottom: 2%;
+          border-radius: 10px;
+          margin-right: 20px;
+          background-color: $color-black;
+          border: 1px solid $color-gold;
+          @include apply-at-sm-md-size {
+            width: 95%;
+            font-size: 10px;
+            padding-left: 10px;
+          }
+        }
+        .disabled {
+          opacity: 0.5;
+        }
+        select {
+          @include body;
+          background-color: $color-black;
+          color: $color-gold;
+          margin-top: 1%;
+          margin-bottom: 2%;
+          width: 100%;
+          height: 30px;
+          padding: 0 15px;
+          border-radius: 10px;
+          border-color: $color-gold;
+          @include apply-at-sm-md-size {
+            width: 99.5%;
+            font-size: 10px;
+            padding-left: 5px;
+          }
+        }
+        ::-webkit-input-placeholder {
+          color: $color-gold;
+        }
+        select:focus {
+          outline: none !important;
+          border-color: $color-blue;
+          box-shadow: 0 0 8px $color-blue;
+        }
+        input:focus {
+          outline: none !important;
+          border-color: $color-blue;
+          box-shadow: 0 0 8px $color-blue;
+        }
+      }
+    }
+    label {
+      font-size: 13px;
+      margin-bottom: 2px;
+      margin-top: 2px;
+      @include apply-at-sm-md-size {
+        font-size: 10px;
+      }
+    }
+    input {
+      @include body;
+      color: $color-gold;
+      padding-left: 15px;
+      width: 96.5%;
+      height: 25px;
+      margin-top: 1%;
+      margin-bottom: 2%;
+      border-radius: 10px;
+      background-color: $color-black;
+      border: 1px solid $color-gold;
+      @include apply-at-sm-md-size {
+        width: 95%;
+        font-size: 10px;
+        padding-left: 10px;
+      }
+    }
+    .disabled {
+      opacity: 0.5;
+    }
+    textarea {
+      @include body;
+      color: $color-gold;
+      height: 90px;
+      padding-left: 15px;
+      padding-top: 30px;
+      margin-top: 2%;
+      margin-bottom: 2%;
+      border-radius: 16px;
+      background-color: $color-black;
+      border: 1px solid $color-gold;
+      @include apply-at-sm-md-size {
+        width: 95%;
+        height: 0%;
+        font-size: 10px;
+      }
+    }
+    ::-webkit-input-placeholder {
+      color: $color-gold;
+    }
+    input:focus {
+      outline: none !important;
+      border-color: $color-blue;
+      box-shadow: 0 0 8px $color-blue;
+    }
+    textarea:focus {
+      outline: none !important;
+      border-color: $color-blue;
+      box-shadow: 0 0 8px $color-blue;
+    }
+    .infoWrapper {
+      @include directionX;
+      justify-content: space-between;
+      margin: 2% 0;
+      @include apply-at-sm-md-size {
+        margin-top: 5%;
+        margin-bottom: 0%;
+      }
+      a {
+        .whatsapp {
+          width: 20px;
+          height: 20px;
+        }
+      }
+      .actionBtn {
+        @include body;
+        font-size: 13px;
+        width: 75px;
+        border-radius: 6px;
+        border: 1px solid $color-gold;
+        background-color: $color-black;
+        color: $color-gold;
+      }
+    }
+  }
+}

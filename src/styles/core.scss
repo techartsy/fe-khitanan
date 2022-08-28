@@ -1,0 +1,42 @@
+:global {
+  // @import 'base';
+  @import "colors";
+  @import "media-mixins";
+  @import "~normalize.css/normalize";
+
+  // Some best-practice CSS that's useful for most apps
+  // Just remove them if they're not what you want
+  html {
+    box-sizing: border-box;
+    /* stylelint-disable declaration-property-unit-whitelist */
+    /* basic font size delcaration here */
+    font-size: 62.5%;
+    min-height: 100%;
+    height: 100%;
+    @include apply-at-lg-size {
+      font-size: 62.5%; // 10px
+    }
+    @include apply-at-md-size {
+      font-size: 50%; // 8px
+    }
+    @include apply-at-sm-size {
+      font-size: 50%; // 6px
+      /* stylelint-enable declaration-property-unit-whitelist */
+    }
+  }
+
+  body {
+    background: $color-light-grey-1;
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
+    // 'text-rending' - this is required to solve the iOS safari issue where letters 'i' and 'l' have space
+    text-rendering: optimizeSpeed;
+  }
+
+  *,
+  *:before,
+  *:after {
+    box-sizing: inherit;
+  }
+}

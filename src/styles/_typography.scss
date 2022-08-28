@@ -1,0 +1,54 @@
+@font-face {
+  font-family: "Consolas";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../static/fonts/consolas.ttf") format("truetype");
+}
+@mixin body {
+  font-family: "Charm", cursive;
+  color: $color-gold;
+}
+@mixin useDancing {
+  font-family: 'Dancing Script', cursive;
+}
+@mixin directionX {
+  display: flex;
+  flex-direction: row;
+}
+@mixin directionY {
+  display: flex;
+  flex-direction: column;
+}
+@mixin reverseDirectionY {
+  display: flex;
+  flex-direction: column-reverse;
+}
+@mixin paddedWrapper {
+  padding: 1.8rem;
+
+  @include apply-at-lg-size {
+    padding: 2rem;
+  }
+}
+@mixin textShadow {
+  text-shadow: #000 0px 0px 2px, #000 0px 0px 2px, #000 0px 0px 2px,
+    #000 0px 0px 2px, #000 0px 0px 2px, #000 0px 0px 2px;
+}
+@mixin content-center {
+  margin-left: auto;
+  margin-right: auto;
+}
+@mixin parallax {
+  background-attachment: fixed;
+}
+@mixin consolas {
+  font-family: Consolas;
+}
+@mixin useMulish {
+  font-family: "Mulish", sans-serif;
+}
+@mixin section-spacing {
+  margin: 22px 0;
+  border-top: 1px solid $color-gold;
+  border-bottom: 1px solid $color-gold;
+}

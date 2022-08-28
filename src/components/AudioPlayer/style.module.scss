@@ -1,0 +1,9 @@
+@import "../../styles/base";
+
+.audioContainer {
+  position: fixed;
+  z-index: 1;
+  bottom: 30px;
+  right: 40px;
+  cursor: pointer;
+}

@@ -1,0 +1,1368 @@
+@import "../../styles/base";
+.container {
+  @include body;
+  background-color: $color-black;
+  overflow-x: hidden;
+  .invitationContainer {
+    .header {
+      @include directionY;
+      height: 100%;
+      width: 100%;
+      top: 0;
+      border: none;
+      object-fit: cover;
+      background-repeat: no-repeat;
+      background-size: cover;
+      padding: 8% 0;
+      margin-bottom: 22px;
+      @include apply-at-lg-size {
+        background-image: url("../../static/images/ksection1.png");
+        background-position: center 25%;
+        height: 100vh;
+      }
+      @include apply-at-sm-md-size {
+        background-image: url("../../static/images/ksection1.png");
+        background-position: center 5%;
+        background-size: contain;
+        height: 320px;
+        justify-content: space-between;
+      }
+      .headerAnimation {
+        margin-top: -5%;
+        @include apply-at-sm-size {
+          @include directionX;
+          margin-top: 50px;
+        }
+        .headerTitle {
+          @include useDancing;
+          float: left;
+          width: 38%;
+          font-size: 90px;
+          margin-left: 5%;
+          align-self: flex-end;
+          .titleTop {
+            max-height: 20px;
+            text-align: center;
+            color: $color-gold;
+            @include apply-at-sm-md-size {
+              text-align: left;
+            }
+          }
+          .titleMid {
+            max-height: 40px;
+            color: $color-white;
+            text-align: center;
+            @include apply-at-sm-md-size {
+              margin-left: -20%;
+              max-height: 10px;
+            }
+          }
+          .titleBottom {
+            color: $color-gold;
+            max-height: 40px;
+            margin-top: -5%;
+            text-align: center;
+            @include apply-at-sm-md-size {
+              margin-right: 12%;
+              text-align: right;
+              height: 100%;
+              margin-top: 5%;
+              margin-bottom: 6%;
+            }
+          }
+          @include apply-at-sm-md-size {
+            font-size: 30px;
+            width: 75%;
+            margin: 0 auto;
+            padding-left: 5%;
+          }
+        }
+      }
+      .countdown {
+        @include directionX;
+        @include content-center;
+        border-top: 1px solid $color-gold;
+        border-bottom: 1px solid $color-gold;
+        width: 30%;
+        padding-top: 2px;
+        padding-bottom: 5px !important;
+        justify-content: space-around;
+        color: $color-white;
+        margin-bottom: 3%;
+        @include apply-at-sm-md-size {
+          padding: 0;
+          width: 55%;
+          text-align: center;
+          margin-bottom: 10%;
+        }
+        .countdownItem {
+          border-radius: 20px;
+          @include apply-at-sm-md-size {
+            font-size: 9px;
+            width: 42px;
+            height: 40px;
+          }
+          .countdownTime {
+            font-size: 35px;
+            text-align: center;
+            @include apply-at-sm-md-size {
+              font-size: 15px;
+            }
+          }
+          .countdownInterval {
+            font-size: 26px;
+            @include apply-at-sm-md-size {
+              margin: 0;
+              font-size: 15px;
+            }
+          }
+        }
+      }
+    }
+    .storySection {
+      // @include section-spacing;
+      @include directionX;
+      font-size: 32px;
+      text-align: center;
+      justify-content: space-between;
+      .storyWrapper {
+        align-self: center;
+        width: 50%;
+        @include apply-at-sm-md-size {
+          width: 90%;
+          text-align: left;
+          letter-spacing: 0.7px;
+        }
+        .story {
+          @include content-center;
+          width: 90%;
+          @include apply-at-sm-md-size {
+            text-align: center;
+            width: 100%;
+          }
+          .quoteAuthor {
+            margin-top: -4%;
+            color: $color-white;
+            @include apply-at-sm-md-size {
+              text-align: right;
+              margin-top: 2%;
+            }
+          }
+        }
+      }
+      .imageWrapper {
+        width: 50%;
+        img {
+          width: 100%;
+          height: 100%;
+        }
+        @include apply-at-sm-md-size {
+          @include content-center;
+          margin-top: 5%;
+          width: 90%;
+        }
+      }
+      @include apply-at-sm-md-size {
+        @include reverseDirectionY;
+        font-size: 16px;
+      }
+    }
+    .secondStoryContainer {
+      @include section-spacing;
+      @include directionX;
+      font-size: 32px;
+      text-align: center;
+      .imageWrapper {
+        width: 50%;
+        @include apply-at-sm-md-size {
+          @include content-center;
+          margin-top: 5%;
+          width: 90%;
+        }
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+      .storyWrapper {
+        align-self: center;
+        width: 50%;
+        @include apply-at-sm-md-size {
+          width: 90%;
+          text-align: right;
+          letter-spacing: 0.7px;
+        }
+        .story {
+          @include content-center;
+          @include directionX;
+          width: 90%;
+          @include apply-at-sm-md-size {
+            text-align: left;
+            width: 100%;
+          }
+          .logoContainer {
+            @include directionY;
+            justify-content: flex-end;
+            align-items: center;
+            width: 30%;
+            .quoteAuthor {
+              margin-top: -4%;
+              margin-bottom: 10%;
+              width: 100%;
+              @include apply-at-sm-md-size {
+                width: 104px;
+                float: right;
+                margin-top: 68%;
+                margin-bottom: 4%;
+              }
+            }
+          }
+        }
+        .author {
+          margin-top: -4%;
+          color: $color-white;
+          @include apply-at-sm-md-size {
+            text-align: left;
+            margin-top: 2%;
+          }
+        }
+      }
+      @include apply-at-sm-md-size {
+        @include directionY;
+        font-size: 16px;
+        text-align: left;
+      }
+    }
+    .paralaxx {
+      border-top: 1px solid $color-gold;
+      .paralaxxWraper {
+        @include parallax;
+        background-image: url("../../static/images/story.png");
+        min-height: 100vh;
+        object-fit: cover;
+        background-repeat: no-repeat;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        @include apply-at-sm-md-size {
+          background-position: center center;
+          background-image: url("../../static/images/story-sm.png");
+        }
+      }
+    }
+    .iosSecondImageSection {
+      border-top: 1px solid $color-gold;
+      border-bottom: 1px solid $color-gold;
+      margin-bottom: 20px;
+      padding: 20px 0 15px;
+      .secondImageIOS {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    .summary {
+      @include directionX;
+      @include parallax;
+      background-image: url("../../static/images/story.png");
+      background-repeat: no-repeat;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+      object-fit: cover;
+      border-top: 1px solid $color-gold;
+      border-bottom: 1px solid $color-gold;
+      @include apply-at-sm-md-size {
+        background-position: center center;
+        background-image: url("../../static/images/story-sm.png");
+      }
+      .bg {
+        background-color: $color-black;
+        width: 100%;
+        opacity: 0.8;
+        .summaryWraper {
+          @include directionY;
+          margin-top: 2%;
+          align-items: center;
+          justify-content: center;
+          @include content-center;
+          .title {
+            @include content-center;
+            height: 80px;
+            display: flex;
+            justify-content: center;
+            font-size: 30px;
+            @include apply-at-sm-md-size {
+              border: none;
+              font-size: 16px;
+              height: 100%;
+            }
+          }
+          .summaryAnimation {
+            .verse {
+              margin-top: 5%;
+            }
+            .separator {
+              @include directionX;
+              @include content-center;
+              height: 1px;
+              background-color: $color-gold;
+              width: 50%;
+            }
+            .summarySection {
+              @include content-center;
+              margin-top: 10%;
+              text-align: center;
+              font-size: 28px;
+              @include apply-at-sm-md-size {
+                font-size: 12px;
+                width: 100%;
+              }
+            }
+          }
+          img {
+            @include directionX;
+            @include content-center;
+            margin-bottom: 5%;
+            @include apply-at-sm-md-size {
+              height: 38px;
+            }
+          }
+        }
+      }
+    }
+    .bridesProfileContainer {
+      @include parallax;
+      @include section-spacing;
+      padding: 3% 0;
+      background-image: url("../../static/images/batik-bg.png");
+      height: 100%;
+      width: 100%;
+      border: none;
+      object-fit: cover;
+      background-repeat: no-repeat;
+      background-size: cover;
+      margin-bottom: 22px;
+      margin-top: 45px;
+      border-top: 1px solid $color-gold;
+      border-bottom: 1px solid $color-gold;
+      .wingWrapper {
+        @include content-center;
+        .image {
+          display: flex;
+          margin-left: auto;
+          margin-right: auto;
+          margin-top: 2%;
+          margin-bottom: 3%;
+          @include apply-at-sm-md-size {
+            height: 49px;
+          }
+        }
+      }
+      .profileWrapper {
+        @include directionX;
+        justify-content: space-around;
+        text-align: center;
+        @include apply-at-sm-md-size {
+          @include reverseDirectionY;
+        }
+        .card {
+          .bridesImage {
+            width: 460px;
+            @include apply-at-sm-md-size {
+              width: 172px;
+            }
+          }
+          .profileInfo {
+            .bridess {
+              font-size: 26px;
+              @include apply-at-sm-md-size {
+                font-size: 16px;
+              }
+            }
+            .parents {
+              font-size: 22px;
+              @include apply-at-sm-md-size {
+                @include content-center;
+                font-size: 16px;
+                width: 80%;
+              }
+            }
+          }
+        }
+      }
+    }
+    .event {
+      @include section-spacing;
+      @include parallax;
+      background-image: url("../../static/images/batik-bg.png");
+      height: 100%;
+      width: 100%;
+      background-repeat: no-repeat;
+      background-size: cover;
+      object-fit: cover;
+      .topEvent {
+        @include directionX;
+        @include content-center;
+        margin-top: 8%;
+        margin-bottom: 5%;
+        @include apply-at-sm-md-size {
+          width: 187px;
+        }
+      }
+      .greeting {
+        @include apply-at-sm-md-size {
+          @include content-center;
+          width: 95%;
+        }
+        p {
+          font-size: 29px;
+          text-align: center;
+          @include apply-at-sm-md-size {
+            font-size: 15px;
+            line-height: 24px;
+          }
+        }
+        .subtitle {
+          @include apply-at-sm-md-size {
+            font-size: 13px;
+            font-weight: normal;
+          }
+        }
+      }
+      .details {
+        .titleWraper {
+          margin-top: 5%;
+          .title {
+            @include directionX;
+            @include content-center;
+            align-items: center;
+            justify-content: center;
+            width: 300px;
+            font-size: 35px;
+            padding-bottom: 14px;
+            border-bottom: 1px solid $color-gold;
+            @include apply-at-sm-md-size {
+              margin-top: 10%;
+              font-size: 14px;
+              width: 40%;
+            }
+          }
+        }
+        .calender {
+          @include directionY;
+          @include content-center;
+          align-items: center;
+          width: 20%;
+          margin-bottom: 3%;
+          border-bottom: 1px solid $color-gold;
+          @include apply-at-sm-md-size {
+            margin-top: 8%;
+            font-size: 12px;
+            width: 50%;
+          }
+          p {
+            width: 220px;
+            text-align: center;
+            margin-top: 6%;
+            @include apply-at-sm-md-size {
+              margin-top: 8%;
+            }
+          }
+          img {
+            @include apply-at-sm-md-size {
+              width: 35px;
+            }
+          }
+        }
+        .timesWraper {
+          @include directionX;
+          @include content-center;
+          width: 80%;
+          justify-content: space-between;
+          margin-bottom: 3%;
+          .time {
+            @include directionY;
+            align-items: center;
+            border-bottom: 1px solid $color-gold;
+            width: 26%;
+            p {
+              width: 100%;
+              text-align: center;
+            }
+          }
+          .timeMobileWrapper {
+            @include content-center;
+            margin-top: 8%;
+            text-align: center;
+            font-size: 12px;
+            img {
+              @include apply-at-sm-md-size {
+                width: 35px;
+              }
+            }
+            .separator {
+              @include apply-at-sm-md-size {
+                height: 1px;
+                background: $color-gold;
+                margin-top: -10px;
+                margin-bottom: -10px;
+              }
+            }
+          }
+        }
+        .locationWraper {
+          @include directionY;
+          @include content-center;
+          align-items: center;
+          margin-bottom: 5%;
+          width: 28%;
+          border-bottom: 1px solid $color-gold;
+          @include apply-at-sm-md-size {
+            width: 60%;
+            font-size: 12px;
+            margin-top: 8%;
+          }
+          p {
+            width: 100%;
+            text-align: center;
+            @include apply-at-sm-md-size {
+              margin-top: 8%;
+            }
+          }
+          img {
+            @include apply-at-sm-md-size {
+              width: 30px;
+            }
+          }
+        }
+        .btnmap {
+          @include content-center;
+          @include directionX;
+          align-items: center;
+          justify-content: center;
+          width: 255px;
+          padding: 0px 10px;
+          margin-bottom: 10%;
+          font-size: 25px;
+          border: 1px solid $color-gold;
+          border-radius: 20px;
+          cursor: pointer;
+          @include apply-at-sm-md-size {
+            max-width: 145px;
+            font-size: 12px;
+            height: 30px;
+            border-radius: 10px;
+            margin-top: 10%;
+          }
+          .imageWrapper {
+            width: 20%;
+            @include directionX;
+            align-items: center;
+            justify-content: center;
+            img {
+              @include apply-at-sm-md-size {
+                width: 20px;
+              }
+            }
+          }
+          p {
+            color: $color-gold;
+            text-decoration: none;
+            @include apply-at-sm-md-size {
+              width: 80%;
+              text-align: center;
+            }
+          }
+        }
+        .btnCalendarContainer {
+          .btnCalendarWrapper {
+            @include content-center;
+            @include directionX;
+            align-items: center;
+            justify-content: center;
+            width: 255px;
+            padding: 0px 10px;
+            margin-bottom: 10%;
+            font-size: 25px;
+            border: 1px solid $color-gold;
+            border-radius: 20px;
+            cursor: pointer;
+            @include apply-at-sm-md-size {
+              max-width: 145px;
+              font-size: 12px;
+              height: 30px;
+              border-radius: 10px;
+              margin-top: 10%;
+            }
+          }
+        }
+      }
+    }
+    .thirdImageSection {
+      border-top: 1px solid $color-gold;
+      .paralaxxWraper {
+        background-image: url("../../static/images/thirdimage.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center top;
+        object-fit: cover;
+        @include parallax;
+        min-height: 100vh;
+        @include apply-at-sm-md-size {
+          background-position: 27% center;
+          background-image: url("../../static/images/thirdimage-sm.png");
+        }
+      }
+    }
+    .iosThirdImageSeparator {
+      border-top: 1px solid $color-gold;
+      .thirdImage {
+        width: 100%;
+      }
+    }
+    .poemSectionContainer {
+      border-bottom: 1px solid $color-gold;
+      border-top: 1px solid $color-gold;
+      font-size: 28px;
+      .poemContainer {
+        @include directionY;
+        align-items: center;
+        justify-content: center;
+        background-image: url("../../static/images/thirdimage.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        object-fit: cover;
+        @include parallax;
+        @include apply-at-sm-md-size {
+          background-position: center;
+          background-image: url("../../static/images/thirdimage-sm.png");
+        }
+        .bg {
+          width: 100%;
+          background-color: $color-black;
+          opacity: 0.82;
+          padding: 2% 0;
+          @include apply-at-sm-md-size {
+            min-height: 680px;
+            padding: 0;
+          }
+          img {
+            @include directionX;
+            @include content-center;
+            height: 100%;
+            width: 50%;
+            min-height: 900px;
+            background-color: $color-black;
+            position: relative;
+            @include apply-at-sm-md-size {
+              min-height: 680px;
+              width: 100%;
+            }
+          }
+        }
+        .poemWrapper {
+          position: absolute;
+          z-index: 1;
+          padding-left: 15%;
+          margin-top: 4%;
+          @include apply-at-sm-md-size {
+            margin-top: 0;
+          }
+          p {
+            margin-top: -30px;
+            @include apply-at-sm-md-size {
+              margin: 0;
+              font-size: 14px;
+            }
+          }
+          .poemMid {
+            width: 66%;
+            margin-left: 9%;
+            margin-top: 10%;
+            margin-bottom: 10%;
+            @include apply-at-sm-md-size {
+              margin-bottom: 10px;
+              margin-top: 10px;
+            }
+          }
+          .author {
+            margin-top: 4%;
+            text-align: right;
+            width: 75%;
+            margin-bottom: 5%;
+          }
+        }
+      }
+    }
+    .attendingContainer {
+      @include section-spacing;
+      @include parallax;
+      background-repeat: no-repeat;
+      background-size: cover;
+      .title {
+        @include body;
+        margin-top: 5%;
+        margin-left: 15%;
+        font-size: 30px;
+        @include apply-at-sm-md-size {
+          @include content-center;
+          font-size: 16px;
+          text-align: center;
+          text-decoration-line: underline;
+          text-underline-offset: 12px;
+          margin-bottom: 5%;
+          width: 90%;
+        }
+      }
+      .attendingWraper {
+        width: 90%;
+        @include useMulish;
+        @include directionX;
+        @include content-center;
+        justify-content: space-between;
+        margin-bottom: 5%;
+        @include apply-at-sm-md-size {
+          @include reverseDirectionY;
+        }
+        .formWraper {
+          .dropdownSection {
+            width: 500px;
+            @include directionX;
+            justify-content: left;
+            align-items: center;
+            border-bottom: 1px solid $color-gold;
+            cursor: pointer;
+            @include apply-at-sm-md-size {
+              width: 100%;
+              justify-content: space-between;
+            }
+            .formTitle {
+              margin-right: 40%;
+              font-size: 24px;
+              @include apply-at-sm-md-size {
+                font-size: 12px;
+              }
+            }
+            .icon {
+              img {
+                @include apply-at-sm-md-size {
+                  width: 12px;
+                }
+              }
+            }
+          }
+          .formContainer {
+            .inputForm {
+              @include useMulish;
+              margin-top: 6%;
+              color: $color-gold;
+              .inputs {
+                @include directionY;
+                font-size: 24px;
+                p {
+                  @include apply-at-sm-md-size {
+                    font-size: 12px;
+                  }
+                }
+                input {
+                  @include useMulish;
+                  color: $color-gold;
+                  padding-left: 15px;
+                  width: 230px;
+                  height: 40px;
+                  margin-bottom: 5%;
+                  border-radius: 16px;
+                  background-color: $color-black;
+                  border: 1px solid $color-gold;
+                  @include apply-at-sm-md-size {
+                    width: 95%;
+                    border-radius: 10px;
+                    font-size: 11px;
+                  }
+                }
+                textarea {
+                  @include useMulish;
+                  color: $color-gold;
+                  height: 90px;
+                  padding-left: 15px;
+                  padding-top: 30px;
+                  border-radius: 16px;
+                  background-color: $color-black;
+                  border: 1px solid $color-gold;
+                  @include apply-at-sm-md-size {
+                    font-size: 11px;
+                    height: 86px;
+                    border-radius: 10px;
+                  }
+                }
+                ::-webkit-input-placeholder {
+                  color: $color-gold;
+                }
+                input:focus {
+                  outline: none !important;
+                  border-color: $color-blue;
+                  box-shadow: 0 0 8px $color-blue;
+                }
+                textarea:focus {
+                  outline: none !important;
+                  border-color: $color-blue;
+                  box-shadow: 0 0 8px $color-blue;
+                }
+                .iconContainer {
+                  display: flex;
+                  justify-content: flex-end;
+                  .micWrapper {
+                    @include directionX;
+                    align-items: center;
+                    justify-content: center;
+                    margin-top: -10%;
+                    margin-right: 10px;
+                    width: 30px;
+                    height: 30px;
+                    .mic {
+                      color: $color-gold; 
+                      position: relative;
+                      width: 18px;
+                      height: 18px;
+                      position: absolute;
+                      z-index: 1000;
+                    }
+                  }
+                }
+              }
+            }
+            .radiosInput {
+              @include directionX;
+              justify-content: space-between;
+              .inputs {
+                @include apply-at-sm-md-size {
+                  @include directionY;
+                  font-size: 12px;
+                  width: 180px;
+                  margin-top: 2%;
+                }
+                .radioWrapper {
+                  @include directionX;
+                  width: 100%;
+                  @include apply-at-sm-md-size {
+                    @include directionY;
+                  }
+                  .radioItem {
+                    @include directionX;
+                    margin-right: 10px;
+                    @include apply-at-sm-md-size {
+                      @include directionX;
+                      align-items: center;
+                      margin: 2% 0;
+                    }
+                    label {
+                      @include apply-at-sm-md-size {
+                        font-size: 10px;
+                        margin-left: 5%;
+                      }
+                    }
+                  }
+                }
+              }
+              .btnSend {
+                align-self: flex-end;
+                font-weight: bold;
+                cursor: pointer;
+                padding: 2%;
+                height: 40px;
+                border-radius: 10px;
+                color: $color-gold;
+                background-color: $color-black;
+                border: 1px solid $color-gold;
+                @include apply-at-sm-md-size {
+                  padding: 0 3%;
+                  height: 32px;
+                  font-size: 12px;
+                  border-radius: 6px;
+                  font-weight: normal;
+                }
+              }
+            }
+          }
+          .hide {
+            opacity: 0;
+            transform: translateY(-4%);
+            transition: all 1.5s;
+          }
+          .show {
+            opacity: 1;
+            transform: translateY(0);
+            transition: all 1.5s;
+          }
+        }
+        .expressionSection {
+          @include directionY;
+          @include body;
+          justify-content: center;
+          align-items: center;
+          @include apply-at-sm-md-size {
+            font-size: 14px;
+          }
+          img {
+            width: 269px;
+            @include apply-at-sm-md-size {
+              width: 155px;
+            }
+          }
+          .expression {
+            text-align: center;
+          }
+        }
+      }
+    }
+    .messageSectionContainer {
+      @include section-spacing;
+      @include parallax;
+      background-image: url("../../static/images/message-bg.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+      padding-bottom: 2%;
+      .sectionTitle {
+        @include content-center;
+        text-align: center;
+        border-bottom: 1px solid $color-gold;
+        width: 20%;
+        font-size: 29px;
+        margin-bottom: 5%;
+        @include apply-at-sm-md-size {
+          font-size: 14px;
+          width: 40%;
+        }
+      }
+      .mainContent {
+        @include directionX;
+        @include content-center;
+        align-items: center;
+        justify-content: space-between;
+        width: 90%;
+        @include apply-at-sm-md-size {
+          @include reverseDirectionY;
+          width: 100%;
+        }
+        .leftSection {
+          @include directionY;
+          align-items: center;
+          width: 100%;
+          margin-right: 3%;
+          p {
+            font-size: 26px;
+            @include apply-at-sm-md-size {
+              font-size: 14px;
+            }
+          }
+          @include apply-at-sm-md-size {
+            width: 100%;
+          }
+          img {
+            @include apply-at-sm-md-size {
+              width: 155px;
+              margin-top: 10%;
+            }
+          }
+        }
+        .rightSection {
+          width: 50%;
+          border: 1px solid $color-gold;
+          border-radius: 10px;
+          padding: 2% 3%;
+          @include apply-at-sm-md-size {
+            width: 100%;
+            border: none;
+          }
+          .imgWrapper {
+            @include apply-at-sm-md-size {
+              width: 100%;
+            }
+            .image {
+              @include directionX;
+              @include content-center;
+              max-width: 570px;
+              // border: 1px solid $color-gold;
+              border-radius: 9px;
+              @include apply-at-sm-md-size {
+                width: 90%;
+              }
+            }
+          }
+          .messageWrapper {
+            margin-top: 4%;
+            height: 360px;
+            overflow-y: scroll;
+            &::-webkit-scrollbar {
+              width: 2px;
+            }
+            &::-webkit-scrollbar-thumb {
+              background: $color-gold;
+              border-radius: 20px;
+            }
+            .messageItemWrapper {
+              @include directionX;
+              align-items: center;
+              color: $color-black;
+              height: auto;
+              @include apply-at-sm-size {
+                @include content-center;
+                width: 90%;
+              }
+              .avatar {
+                @include directionX;
+                width: 5%;
+                margin: auto;
+                @include apply-at-sm-size {
+                  align-items: center;
+                  height: 25px;
+                  width: 25px;
+                  margin-right: 5px;
+                }
+              }
+              .messageShape {
+                @include directionX;
+                width: 95%;
+                align-items: center;
+                padding-left: 1.5rem;
+                @include apply-at-sm-size {
+                  padding-left: 1rem;
+                }
+                .outerTriangle {
+                  width: 0;
+                  height: 0;
+                  border-top: 23px solid transparent;
+                  border-bottom: 23px solid transparent;
+                  border-right: 23px solid $color-gold;
+                  .innerTriangle {
+                    position: relative;
+                    top: -20px;
+                    left: 2px;
+                    width: 0;
+                    height: 0;
+                    border-top: 20px solid transparent;
+                    border-bottom: 20px solid transparent;
+                    border-right: 20px solid $color-black;
+                  }
+                }
+                .messageBubble {
+                  margin: 1rem;
+                  background-color: $color-black;
+                  color: $color-gold;
+                  border: 1px solid $color-gold;
+                  border-radius: 6px;
+                  text-align: left;
+                  padding: 20px;
+                  width: 100%;
+                  margin-left: -5px;
+                  @include apply-at-sm-size {
+                    width: 80%;
+                  }
+                  .name {
+                    font-size: 17px;
+                    margin-bottom: 1.5%;
+                    @include apply-at-sm-size {
+                      margin-bottom: 0.5rem;
+                      font-size: 12px;
+                    }
+                  }
+                  .message {
+                    @include useMulish;
+                    font-size: 15px;
+                    @include apply-at-sm-size {
+                      font-size: 10px;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .giftContainer {
+      @include section-spacing;
+      .giftWraper {
+        width: 60%;
+        @include apply-at-sm-md-size {
+          width: 100%;
+        }
+        @include content-center;
+        .tittleRibbon {
+          .titleGift {
+            width: 30%;
+            @include content-center;
+            text-align: center;
+            font-size: 30px;
+            border-bottom: 1px solid $color-gold;
+            @include apply-at-sm-md-size {
+              font-size: 16px;
+              width: 100%;
+              text-decoration-line: underline;
+              text-underline-offset: 12px;
+              border: none;
+            }
+          }
+          .ribbon {
+            display: flex;
+            @include content-center;
+            @include apply-at-sm-md-size {
+              width: 89px;
+            }
+          }
+        }
+        .dropdownSection {
+          width: 30%;
+          @include content-center;
+          @include directionX;
+          justify-content: center;
+          align-items: center;
+          margin-bottom: 5%;
+          cursor: pointer;
+          @include apply-at-sm-md-size {
+            width: 100%;
+            align-items: center;
+          }
+          .title {
+            font-size: 24px;
+            margin-right: 6%;
+            @include apply-at-sm-md-size {
+              font-size: 14px;
+            }
+          }
+          .icon {
+            @include apply-at-sm-md-size {
+              margin-top: -5px;
+            }
+            img {
+              @include apply-at-sm-md-size {
+                width: 10px;
+                height: 6px;
+              }
+            }
+          }
+        }
+        .giftInfoWraper {
+          background-image: url("../../static/images/giftbg.png");
+          background-repeat: no-repeat;
+          background-size: cover;
+          margin-bottom: 10%;
+          padding-bottom: 5%;
+          @include directionY;
+          .imageDetail {
+            @include directionY;
+            .rose {
+              display: flex;
+              @include content-center;
+              width: 204px;
+              margin-bottom: 5%;
+              @include apply-at-sm-md-size {
+                width: 85px;
+              }
+            }
+            .card {
+              display: flex;
+              @include content-center;
+              width: 449px;
+              margin-bottom: 10%;
+              @include apply-at-sm-md-size {
+                width: 180px;
+              }
+            }
+          }
+          .infoWrapper {
+            border-top: 1px dotted $color-gold;
+            border-bottom: 1px dotted $color-gold;
+            margin: 20px 0;
+            padding-bottom: 40px;
+            text-align: center;
+            @include apply-at-sm-md-size {
+              @include content-center;
+              padding-bottom: 35px;
+              width: 90%;
+            }
+            .infoTitle {
+              font-size: 30px;
+              display: flex;
+              @include content-center;
+              justify-content: center;
+              @include apply-at-sm-md-size {
+                font-size: 14px;
+                text-align: center;
+              }
+            }
+            .infoDetail {
+              font-size: 18px;
+              @include content-center;
+              text-align: center;
+              @include apply-at-sm-md-size {
+                font-size: 12px;
+              }
+            }
+            .copyWraper {
+              position: relative;
+              @include directionX;
+              justify-content: center;
+              align-items: center;
+              margin-bottom: 5%;
+              @include content-center;
+              .copy {
+                top: 10px;
+                position: absolute;
+                width: 115px;
+                cursor: pointer;
+                @include apply-at-sm-md-size {
+                  width: 70px;
+                  top: 5px;
+                }
+              }
+              .notifCopy {
+                position: absolute;
+                right: -110px;
+                top: 0;
+                @include apply-at-sm-md-size {
+                  font-size: 12px;
+                  left: 165px;
+                  top: -5px;
+                  right: 50px;
+                }
+              }
+            }
+          }
+          .copyWraper {
+            position: relative;
+            @include directionX;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 5%;
+            @include content-center;
+            .copy {
+              @include apply-at-sm-md-size {
+                width: 70px;
+              }
+              position: absolute;
+              width: 115px;
+              cursor: pointer;
+            }
+            .notifCopy {
+              position: absolute;
+              text-align: center;
+              left: 75px;
+              @include apply-at-sm-md-size {
+                font-size: 12px;
+                left: 50px;
+              }
+            }
+          }
+
+          .closingStatement {
+            font-size: 18px;
+            @include content-center;
+            @include apply-at-sm-md-size {
+              font-size: 12px;
+            }
+          }
+          .btnConfirmation {
+            display: flex;
+            @include content-center;
+            justify-content: center;
+            align-items: center;
+            padding: 0 5%;
+            min-height: 37px;
+            border-radius: 10px;
+            border: 1px solid $color-gold;
+            font-size: 18px;
+            margin-bottom: 1%;
+            cursor: pointer;
+            @include apply-at-sm-md-size {
+              font-size: 12px;
+              min-height: 25px;
+            }
+          }
+        }
+        .hideGift {
+          opacity: 0;
+          transition: opacity 2s;
+        }
+        .closeGift {
+          display: none;
+        }
+        .showGift {
+          @include fadeIn;
+        }
+      }
+    }
+    .closingSectionContainer {
+      @include directionY;
+      justify-content: center;
+      align-items: center;
+      background-image: url("../../static/images/closing-bg.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+      text-align: center;
+      border-bottom: 1px solid $color-gold;
+      .closingSentenceWrapper {
+        @include content-center;
+        font-size: 30px;
+        width: 100%;
+        margin-bottom: -25px;
+        @include apply-at-sm-md-size {
+          font-size: 14px;
+          width: 100%;
+          padding-top: 5%;
+          margin-bottom: 0;
+        }
+      }
+      .image {
+        @include apply-at-sm-md-size {
+          width: 147px;
+          margin-bottom: 5%;
+        }
+      }
+    }
+    .footerContainer {
+      @include useMulish;
+      margin-top: 22px;
+      @include directionY;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 6%;
+      border-top: 1px solid $color-gold;
+      .colaboration {
+        font-size: 38px;
+        @include apply-at-sm-md-size {
+          font-size: 14px;
+        }
+      }
+      .brand {
+        margin-top: -1%;
+        margin-bottom: 4%;
+        @include apply-at-sm-md-size {
+          width: 80px;
+        }
+      }
+      .contact {
+        width: 30px;
+        height: 30px;
+        margin-bottom: 2%;
+        @include apply-at-sm-md-size {
+          width: 20px;
+          height: 20px;
+          margin-bottom: 5%;
+        }
+      }
+    }
+    .my-swal {
+      z-index: 10000 !important;
+    }
+    .swal-overlay {
+      z-index: 100000000000 !important;
+    }
+    :host ::ng-deep .swal-overlay {
+      z-index: 30000000000 !important;
+    }
+  }
+}

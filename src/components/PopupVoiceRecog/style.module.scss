@@ -1,0 +1,45 @@
+@import "../../styles/base";
+.popupWrapper {
+  @include apply-at-md-lg-size {
+    width: 360px;
+  }
+  color: $color-gold;
+  background-color: $color-black;
+  font-size: 14px;
+  .prokesTitle {
+    @include body;
+    color: $color-gold;
+  }
+  .content {
+    text-align: left;
+    margin-top: -2%;
+    ol {
+      margin: 0;
+      padding: 0 0 0 7%;
+      li {
+        padding-left: 1%;
+        .iconMic {
+          width: 10px;
+          height: 10px;
+        }
+      }
+    }
+  }
+  .closePopupBtn {
+    @include body;
+    @include directionX;
+    float: right;
+    align-items: center;
+    justify-content: center;
+    background-color: $color-black;
+    color: $color-gold;
+    border-radius: 100px;
+    border: 1px solid $color-gold;
+    padding: 5px 10px;
+    max-height: 53px;
+    cursor: pointer;
+    margin-top: 5%;
+    width: 74px;
+    height: 26px;
+  }
+}
