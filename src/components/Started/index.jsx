@@ -2,6 +2,7 @@ import React from 'react';
 import _ from 'lodash';
 import piguraTop from '../../static/images/piguraTop.png';
 import gunungan from '../../static/images/gunungan.png';
+import btnOpen from '../../static/icons/btnOpen.png';
 import piguraBottom from '../../static/images/piguraBottom.png';
 import classes from './style.module.scss';
 
@@ -19,7 +20,7 @@ const Started = ({ openInvitation, name }) => {
             <p>Di tempat</p>
           </div>
         }
-        <div className={classes.btn} onClick={openInvitation}><strong>Buka Undangan</strong></div>
+        <img className={classes.open} src={btnOpen} onClick={openInvitation} />
         <img className={classes.bottom} src={piguraBottom} alt="frame" />
       </div>
     </div>
