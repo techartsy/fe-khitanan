@@ -5,156 +5,186 @@
   overflow-x: hidden;
   .invitationContainer {
     .header {
-      @include directionY;
-      height: 100%;
-      width: 100%;
-      top: 0;
-      border: none;
-      object-fit: cover;
-      background-repeat: no-repeat;
-      background-size: cover;
-      padding: 8% 0;
-      margin-bottom: 22px;
-      @include apply-at-lg-size {
-        background-image: url("../../static/images/ksection1.png");
-        background-position: center 25%;
-        height: 100vh;
-      }
-      @include apply-at-sm-md-size {
-        background-image: url("../../static/images/ksection1.png");
-        background-position: center 5%;
-        background-size: contain;
-        height: 320px;
-        justify-content: space-between;
-      }
-      .headerAnimation {
-        margin-top: -5%;
-        @include apply-at-sm-size {
-          @include directionX;
-          margin-top: 50px;
-        }
-        .headerTitle {
-          @include useDancing;
-          float: left;
-          width: 38%;
-          font-size: 90px;
-          margin-left: 5%;
-          align-self: flex-end;
-          .titleTop {
-            max-height: 20px;
-            text-align: center;
-            color: $color-gold;
-            @include apply-at-sm-md-size {
-              text-align: left;
-            }
-          }
-          .titleMid {
-            max-height: 40px;
-            color: $color-white;
-            text-align: center;
-            @include apply-at-sm-md-size {
-              margin-left: -20%;
-              max-height: 10px;
-            }
-          }
-          .titleBottom {
-            color: $color-gold;
-            max-height: 40px;
-            margin-top: -5%;
-            text-align: center;
-            @include apply-at-sm-md-size {
-              margin-right: 12%;
-              text-align: right;
-              height: 100%;
-              margin-top: 5%;
-              margin-bottom: 6%;
-            }
-          }
-          @include apply-at-sm-md-size {
-            font-size: 30px;
-            width: 75%;
-            margin: 0 auto;
-            padding-left: 5%;
-          }
-        }
+      @include directionX;
+      justify-content: space-around;
+      .imgOne {
+        width: 80%;
+        padding-top: 3%;
       }
       .countdown {
-        @include directionX;
-        @include content-center;
-        border-top: 1px solid $color-gold;
-        border-bottom: 1px solid $color-gold;
-        width: 30%;
-        padding-top: 2px;
-        padding-bottom: 5px !important;
-        justify-content: space-around;
-        color: $color-white;
-        margin-bottom: 3%;
-        @include apply-at-sm-md-size {
-          padding: 0;
-          width: 55%;
-          text-align: center;
-          margin-bottom: 10%;
-        }
-        .countdownItem {
-          border-radius: 20px;
-          @include apply-at-sm-md-size {
-            font-size: 9px;
-            width: 42px;
-            height: 40px;
-          }
-          .countdownTime {
-            font-size: 35px;
-            text-align: center;
-            @include apply-at-sm-md-size {
-              font-size: 15px;
-            }
-          }
-          .countdownInterval {
-            font-size: 26px;
-            @include apply-at-sm-md-size {
-              margin: 0;
-              font-size: 15px;
-            }
-          }
-        }
+        @include directionY;
+        text-align: center;
+        color: $color-mid-yellow-shadow;
+        font-size: 26px;
+        justify-content: center;
+      }
+      .countdownItem {
+        border-bottom: 2px solid $color-light-yellow-shadow;
+      }
+      .countdownTime {
+        font-size: 35px;
+        text-align: center;
+      }
+      .countdownInterval {
+        font-size: 26px;
       }
     }
+    // .header {
+    //   background-repeat: no-repeat;
+    //   @include apply-at-lg-size {
+    //   background-image: url("https://res.cloudinary.com/dwvzfit8v/image/upload/v1661790650/Invitation%20Assets/Khitanan/mainImage1_zo6vco.webp");
+    //   background-position: center 10%;
+    //   }
+    //   @include apply-at-sm-md-size {
+    //     // border: 1px solid blue;
+    //     background-image: url("https://res.cloudinary.com/dwvzfit8v/image/upload/v1661790650/Invitation%20Assets/Khitanan/mainImage1_zo6vco.webp");
+    //     // background-position: center 5%;
+    //     // margin: 2% 3%;
+    //     // padding: 4% 5%;
+    //     background-size: contain;
+    //     height: 320px;
+    //     // width: 100%;
+    //     justify-content: space-between;
+    //   }
+    //   .subHeader {
+    //     // @include directionX;
+    //     // border: 1px solid green;
+    //     // @include directionY;
+    //     // height: 100%;
+    //     // width: 100%;
+    //     // top: 0;
+    //     // border: none;
+    //     // object-fit: cover;
+    //     // margin-bottom: 22px;
+    //     .headerAnimation {
+    //       // margin-top: -5%;
+    //       .mainName {
+    //         margin-top: 55%;
+    //         // border: 1px solid orange;
+    //       }
+    //       @include apply-at-sm-size {
+    //         @include directionX;
+    //         // margin-top: 50px;
+    //       }
+    //       .headerTitle {
+    //         @include useDancing;
+    //         float: left;
+    //         width: 38%;
+    //         font-size: 90px;
+    //         margin-left: 5%;
+    //         align-self: flex-end;
+    //         .titleTop {
+    //           max-height: 20px;
+    //           text-align: center;
+    //           color: $color-gold;
+    //           @include apply-at-sm-md-size {
+    //             text-align: left;
+    //           }
+    //         }
+    //         .titleMid {
+    //           max-height: 40px;
+    //           color: $color-white;
+    //           text-align: center;
+    //           @include apply-at-sm-md-size {
+    //             margin-left: -20%;
+    //             max-height: 10px;
+    //           }
+    //         }
+    //         .titleBottom {
+    //           color: $color-gold;
+    //           max-height: 40px;
+    //           margin-top: -5%;
+    //           text-align: center;
+    //           @include apply-at-sm-md-size {
+    //             margin-right: 12%;
+    //             text-align: right;
+    //             height: 100%;
+    //             margin-top: 5%;
+    //             margin-bottom: 6%;
+    //           }
+    //         }
+    //         @include apply-at-sm-md-size {
+    //           font-size: 30px;
+    //           width: 75%;
+    //           margin: 0 auto;
+    //           padding-left: 5%;
+    //         }
+    //       }
+    //     }
+    //     .countdown {
+    //       // border: 1px solid green;
+    //       @include directionY;
+    //       // justify-content: end;
+    //       // @include content-center;
+    //       border-right: 1px solid $color-gold;
+    //       border-left: 1px solid $color-gold;
+    //       // width: 30%;
+    //       // padding-top: 2px;
+    //       // padding-bottom: 5px !important;
+    //       // justify-content: space-around;
+    //       // color: $color-white;
+    //       // margin-bottom: 3%;
+    //       @include apply-at-sm-md-size {
+    //         padding: 0;
+    //         width: 55%;
+    //         text-align: center;
+    //         margin-bottom: 10%;
+    //       }
+    //       .countdownItem {
+    //         border-radius: 20px;
+    //         @include apply-at-sm-md-size {
+    //           font-size: 9px;
+    //           width: 42px;
+    //           height: 40px;
+    //         }
+    //         .countdownTime {
+    //           font-size: 35px;
+    //           text-align: center;
+    //           @include apply-at-sm-md-size {
+    //             font-size: 15px;
+    //           }
+    //         }
+    //         .countdownInterval {
+    //           font-size: 26px;
+    //           @include apply-at-sm-md-size {
+    //             margin: 0;
+    //             font-size: 15px;
+    //           }
+    //         }
+    //       }
+    //     }
+    //   }
+    // }
     .storySection {
-      // @include section-spacing;
+      @include section-spacing;
       @include directionX;
-      font-size: 32px;
+      font-size: 50px;
       text-align: center;
       justify-content: space-between;
       .storyWrapper {
         align-self: center;
-        width: 50%;
-        @include apply-at-sm-md-size {
-          width: 90%;
-          text-align: left;
-          letter-spacing: 0.7px;
-        }
+        width: 80%;
+        // border: 1px solid blue;
+        // @include apply-at-sm-md-size {
+        //   width: 90%;
+        //   text-align: left;
+        //   letter-spacing: 0.7px;
+        // }
         .story {
           @include content-center;
-          width: 90%;
-          @include apply-at-sm-md-size {
-            text-align: center;
-            width: 100%;
-          }
-          .quoteAuthor {
-            margin-top: -4%;
-            color: $color-white;
-            @include apply-at-sm-md-size {
-              text-align: right;
-              margin-top: 2%;
-            }
-          }
+          // width: 90%;
+          // border: 1px solid red;
+          // @include apply-at-sm-md-size {
+          //   text-align: center;
+          //   width: 100%;
+          // }
         }
       }
       .imageWrapper {
         width: 50%;
         img {
-          width: 100%;
-          height: 100%;
+          width: 90%;
+          height: 90%;
         }
         @include apply-at-sm-md-size {
           @include content-center;
@@ -173,6 +203,7 @@
       font-size: 32px;
       text-align: center;
       .imageWrapper {
+        z-index: 2;
         width: 50%;
         @include apply-at-sm-md-size {
           @include content-center;
@@ -199,6 +230,17 @@
           @include apply-at-sm-md-size {
             text-align: left;
             width: 100%;
+          }
+          .kidd {
+            position: absolute;
+            margin-top: -24%;
+            margin-left: -5%;
+            z-index: 3;
+          }
+          .bushh {
+            margin-top: -2%;
+            position: absolute;
+            z-index: 3;
           }
           .logoContainer {
             @include directionY;
@@ -261,7 +303,6 @@
         height: 100%;
       }
     }
-
     .summary {
       @include directionX;
       @include parallax;
@@ -288,8 +329,14 @@
           align-items: center;
           justify-content: center;
           @include content-center;
+          .boyImg {
+            width: 38%;
+            height: 0%;
+            margin-top: 7%;
+          }
           .title {
             @include content-center;
+            color: $color-mid-yellow-shadow;
             height: 80px;
             display: flex;
             justify-content: center;
@@ -316,6 +363,7 @@
               margin-top: 10%;
               text-align: center;
               font-size: 28px;
+              color: $color-mid-yellow-shadow;
               @include apply-at-sm-md-size {
                 font-size: 12px;
                 width: 100%;

@@ -4,6 +4,9 @@
   font-weight: normal;
   src: url("../static/fonts/consolas.ttf") format("truetype");
 }
+@mixin mainText {
+  font-family: 'Poppins';
+}
 @mixin body {
   font-family: "Charm", cursive;
   color: $color-gold;
@@ -49,6 +52,6 @@
 }
 @mixin section-spacing {
   margin: 22px 0;
-  border-top: 1px solid $color-gold;
-  border-bottom: 1px solid $color-gold;
+  border-top: 2px solid $color-light-yellow-shadow;
+  border-bottom: 2px solid $color-light-yellow-shadow;
 }
