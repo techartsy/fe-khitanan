@@ -26,15 +26,13 @@ import PopupProkes from '../../components/PopupProkes';
 import PopupGiftConfirmation from '../../components/PopupGiftConfirmation';
 import PopupVoiceRecognition from '../../components/PopupVoiceRecog';
 
-import ksection2 from '../../static/images/ksection2.png';
-import ksection3 from '../../static/images/ksection3.png';
-import ksection31 from '../../static/images/ksection31.png';
+// import ksection2 from '../../static/images/ksection2.png';
+// import ksection3 from '../../static/images/ksection3.png';
+// import ksection31 from '../../static/images/ksection31.png';
 import Male from '../../static/images/male.png';
 import Female from '../../static/images/female.png';
 import WingTop from '../../static/images/wing-top.png';
 import WingBottom from '../../static/images/wing-bottom.png';
-import Frame from '../../static/images/frame.png';
-import wingg from '../../static/images/wingg.png';
 import topevent from '../../static/images/topevent.png';
 import kattendingmeessage from '../../static/images/kattendingmeessage.png';
 import gunungan from '../../static/images/gunungan.png';
@@ -47,6 +45,8 @@ import numbercopy from '../../static/images/numbercopy.png';
 import logoGold from '../../static/images/logoGold.png';
 import logoSm from '../../static/images/logo-sm.png';
 import calender from '../../static/icons/calender.png';
+import kid from '../../static/icons/kid.png';
+import bush from '../../static/icons/bush.png';
 import time from '../../static/icons/time.png';
 import Location from '../../static/icons/location.png';
 import plane from '../../static/icons/plane.png';
@@ -56,8 +56,13 @@ import Mail from '../../static/icons/mail.png';
 import whatsapp from '../../static/icons/whatsapp.png';
 import Story from '../../static/images/story.png';
 import ThirdImageSM from '../../static/images/thirdimage-sm.png';
-import ArRum from '../../static/images/Ar-rum.png';
 import classes from './style.module.scss';
+
+const mainImage = 'https://res.cloudinary.com/dwvzfit8v/image/upload/v1661790650/Invitation%20Assets/Khitanan/mainImage1_zo6vco.webp';
+const secondimg = 'https://res.cloudinary.com/dwvzfit8v/image/upload/v1661876834/Invitation%20Assets/Khitanan/3-khitan-1_xbemfg.webp';
+const thirdimg = 'https://res.cloudinary.com/dwvzfit8v/image/upload/v1661879541/Invitation%20Assets/Khitanan/1-khitan-3_nkaahh.webp';
+const boy = 'https://res.cloudinary.com/dwvzfit8v/image/upload/v1661888194/Invitation%20Assets/Khitanan/icon_bqne57.webp';
+const hadist = 'https://res.cloudinary.com/dwvzfit8v/image/upload/v1661888194/Invitation%20Assets/Khitanan/%D8%B9%D9%8E%D9%86%D9%92-%D8%A7%D9%8E%D8%A8%D9%90%D9%89-%D9%87%D9%8F%D8%B1%D9%8E%D9%8A%D9%92%D8%B1%D9%8E%D8%A9%D9%8E-%D8%B1%D8%B6-%D8%B9%D9%8E%D9%86%D9%90-%D8%A7%D9%84%D9%86%D9%8E%D9%91%D8%A8%D9%90%D9%8A%D9%91-%D8%B5-%D9%82%D9%8E%D8%A7%D9%84%D9%8E_-%D8%A7%D9%8E%D9%84%D9%92%D9%81%D9%90%D8%B7%D9%92%D8%B1%D9%8E%D8%A9%D9%8F-%D8%AE%D9%8E%D9%85%D9%92%D8%B3%D9%8C_-%D8%A7%D9%8E%D9%84%D9%92%D8%AE%D9%90%D8%AA%D9%8E%D8%A7%D9%86%D9%8F-%D9%88%D9%8E-%D8%A7%D9%92%D9%84%D8%A7%D9%90%D8%B3%D9%92%D8%AA%D9%90%D8%AD%D9%92%D8%AF%D9%8E%D8%A7%D8%AF_ugoevk.webp';
 
 const InvitationPage = () => {
   const [isInvitationOpen, setIsInvitationOpen] = useState(false);
@@ -380,20 +385,12 @@ const InvitationPage = () => {
   const generateHeader = () => {
     return (
       <div className={classes.header}>
-        <Fade delay={2000} duration={3000}>
-          <div className={classes.headerAnimation}>
-            <div className={classes.headerTitle}>
-              <p className={classes.titleTop}>Gilang</p>
-              <p className={classes.titleMid}>&</p>
-              <p className={classes.titleBottom}>Vina</p>
-            </div>
-          </div>
-        </Fade>
+        <img className={classes.imgOne} src={mainImage} alt='mainImage' />
         <div className={classes.countdown}>
           {timerComponents.length && timerComponents}
         </div>
-      </div >
-    );
+      </div>
+    )
   };
 
   const generateStory = () => {
@@ -402,18 +399,16 @@ const InvitationPage = () => {
         <div className={classes.storyWrapper}>
           <div className={classes.story}>
             <Fade when={!showPopupProkes} left duration={3000}>
-              <p>Sebab kurasa ini sangat spiritual <br/>
-              Ku tak bisa tulis yang indah<br/>
-              Dan berbunga-bunga<br/>
-              Yang kuingin langsung saja menikam di hati<br/>
-              Ku tak rela kau menangis.
+              <p>Jalan - jalan kepantai bersama pacar <br/>
+              Tiba disana naik selancar<br/>
+              Acara Sunatan berjalan lancar<br/>
+              Semoga berkah makin terpancar<br/>
               </p>
-              <p className={classes.quoteAuthor}>~ Jason Ranti ~</p>
             </Fade>
           </div>
         </div>
         <div className={classes.imageWrapper}>
-          <img src={ksection2} alt='Brides' />
+          <img src={secondimg} alt='Brides' />
         </div>
       </div>
     );
@@ -423,12 +418,12 @@ const InvitationPage = () => {
     return (
       <div className={classes.secondStoryContainer}>
         <div className={classes.imageWrapper}>
-          <img src={ksection3} alt="Brides" />
+          <img src={thirdimg} alt="Brides" />
         </div>
         <div className={classes.storyWrapper}>
           <div className={classes.story}>
             <Fade when={!showPopupProkes} right duration={3000}>
-              <p>
+              {/* <p>
                 Saat tak tahu arah kau disana<br/>
                 Menjadi gagah saat ku tak bisa<br/>
                 Sedikit ku jelaskan tentangku dan kamu<br/>
@@ -441,16 +436,18 @@ const InvitationPage = () => {
                 Melihatmu kuat setengah mati<br/>
                 Seperti detak jantung yang bertaut<br/>
                 Nyawaku nyala karena denganmu
-              </p>
+              </p> */}
+              <img className={classes.kidd} src={kid} />
             </Fade>
-            <Fade when={!showPopupProkes} right duration={3000}>
-              <div className={classes.logoContainer}>
+            {/* <Fade when={!showPopupProkes} right duration={3000}> */}
+              {/* <div className={classes.logoContainer}>
                 <img src={ksection31} className={classes.quoteAuthor} alt="logo" />
-              </div>
-            </Fade>
+              </div> */}
+            {/* </Fade> */}
           </div>
           <Fade when={!showPopupProkes} right duration={3000}>
-            <p className={classes.author}>~ Nadin Amizah ~</p>
+              <img className={classes.bushh} src={bush} />
+            {/* <p className={classes.author}>~ Nadin Amizah ~</p> */}
           </Fade>
         </div>
       </div>
@@ -479,24 +476,25 @@ const InvitationPage = () => {
       <div className={classes.summary}>
         <div className={classes.bg}>
           <div className={classes.summaryWraper}>
+            <img className={classes.boyImg} src={boy} alt='boy' />
             <Fade duration={4000}>
               <div className={classes.title}>
                 <p>
-                  QS. Ar-Rum ayat 21
+                  [ HR . Bukhari ]
                 </p>
               </div>
               <div className={classes.summaryAnimation}>
-                <img src={ArRum} alt="Ar-Rum" className={classes.verse} />
+                <img src={hadist} alt="Ar-Rum" className={classes.verse} />
                 <div className={classes.separator} />
                 <p className={classes.summarySection}>
-                  “Dan di antara tanda-tanda (kebesaran)-Nya ialah Dia<br />
-                  menciptakan pasangan-pasangan untukmu dari jenismu sendiri, <br />
-                  agar kamu cenderung dan merasa tenteram kepadanya, dan Dia menjadikan <br />
-                  di antaramu rasa kasih dan sayang. Sungguh, pada yang demikian itu <br />
-                  benar-benar terdapat tanda-tanda (kebesaran Allah) bagi kaum yang berpikir.”<br /><br />
+                  “Artinya : "Dari Abu Hurairah RA, dari Nabi SAW, beliau<br />
+                  bersabda, : Fithrah itu ada lima : 1. Khitan, 2. Mencukur<br />
+                  rambut kemaluan, 3. Mencabut bulu ketiak,<br />
+                  4. Memotong kumis, dan 5. Memotong kuku"<br />
+                  [HR . Bukhari juz 7, hal. 143]<br /><br />
                 </p>
               </div>
-              <img src={wingg} alt='wingBottom' />
+              {/* <img src={wingg} alt='wingBottom' /> */}
             </Fade>
           </div>
         </div>
@@ -831,7 +829,7 @@ const InvitationPage = () => {
         {giftSection()}
         {closingSection()}
         {footerSection()}
-        <AudioComponent isPlaying={isPlaying} setIsPlaying={setIsPlaying} />
+        {/* <AudioComponent isPlaying={isPlaying} setIsPlaying={setIsPlaying} /> */}
         <PopupProkes open={showPopupProkes} handleClose={closePopupProkes} />
         <PopupGiftConfirmation
           open={openConfirmation}

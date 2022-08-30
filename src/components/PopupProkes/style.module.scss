@@ -1,6 +1,12 @@
 @import "../../styles/base";
 
 .popupWrapper {
+  // width: 60%;
+  // height: 40%;
+  // height: 490px;
+  // display: flex;
+  // flex-wrap: wrap;
+  // border: 1px solid red;
   .prokesTitle {
     @include body;
     color: $color-gold;
