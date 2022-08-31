@@ -8,6 +8,9 @@
   font-family: 'Poppins', sans-serif;
   color: $color-gold;
 }
+@mixin usePoppins {
+  font-family: 'Poppins', sans-serif;
+}
 @mixin pacifico {
   font-family: 'Pacifico', cursive;
 }

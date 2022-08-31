@@ -82,7 +82,7 @@ const PopupGiftConfirmation = withStyles(styles)((props) => {
             <p>Konfirmasi Hadiah</p>
           </div>
           <div className={classes.subtitle}>
-            <p>Konfirmasi kiriman anda untuk memudahkan mempelai dalam melakukan pendataan</p>
+            <p>Konfirmasi kiriman anda untuk memudahkan kami dalam melakukan pendataan</p>
           </div>
           <form className={classes.form} onSubmit={onSubmit}>
             <div className={classes.separate}>

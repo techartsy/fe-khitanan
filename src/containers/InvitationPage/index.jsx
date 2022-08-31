@@ -56,6 +56,7 @@ import Mail from '../../static/icons/mail.png';
 import whatsapp from '../../static/icons/whatsapp.png';
 import Story from '../../static/images/story.png';
 import ThirdImageSM from '../../static/images/thirdimage-sm.png';
+import btnSend from '../../static/icons/btn-send.png';
 import classes from './style.module.scss';
 
 const mainImage = 'https://res.cloudinary.com/dwvzfit8v/image/upload/v1661790650/Invitation%20Assets/Khitanan/mainImage1_zo6vco.webp';
@@ -456,22 +457,22 @@ const InvitationPage = () => {
     );
   };
 
-  const secondImageSection = () => {
-    return (
-      <div className={classes.paralaxx}>
-        <div className={classes.paralaxxWraper}>
-        </div>
-      </div>
-    );
-  };
+  // const secondImageSection = () => {
+  //   return (
+  //     <div className={classes.paralaxx}>
+  //       <div className={classes.paralaxxWraper}>
+  //       </div>
+  //     </div>
+  //   );
+  // };
 
-  const iosSecondImageSection = () => {
-    return (
-      <div className={classes.iosSecondImageSection}>
-        <img src={Story} className={classes.secondImageIOS} alt="secondary" />
-      </div>
-    );
-  };
+  // const iosSecondImageSection = () => {
+  //   return (
+  //     <div className={classes.iosSecondImageSection}>
+  //       <img src={Story} className={classes.secondImageIOS} alt="secondary" />
+  //     </div>
+  //   );
+  // };
 
   const summarySection = () => {
     return (
@@ -611,25 +612,18 @@ const InvitationPage = () => {
     );
   };
 
-  const thirdImageSeparator = () => {
+  const generateSecondBiography = () => {
     return (
-      <div>
-        <div className={classes.thirdImageSection}>
-          <div className={classes.paralaxxWraper}></div>
-        </div>
+      <div className={classes.secondBiographySection}>
+        <p>
+          Khitan :<br/>
+          Muhammad Raffi Ramadhan<br/>
+          (Putra dari Chef Ichal dan Bunda Nunu).<br/><br/>
+          Semoga setelah berkhitan putra kami menjadi anak<br/>yang sholeh, berbakti kepada kedua orang tua,<br/>agama, masyarakat, bangsa, dan negara.<br/>Amiin ya Robbal'alamin.
+        </p>
       </div>
-    );
-  };
-
-  const iosThirdImageSeparator = () => {
-    return (
-      <div>
-        <div className={classes.iosThirdImageSeparator}>
-          <img src={ThirdImageSM} alt="" className={classes.thirdImage} />
-        </div>
-      </div>
-    );
-  };
+    )
+  }
 
   const attendingSection = () => {
     return (
@@ -677,16 +671,21 @@ const InvitationPage = () => {
                     </div>
                   </div>
                 </div>
-                <button type='submit' className={classes.btnSend}>Kirim Ucapan</button>
+                <button type='submit' className={classes.btnSend}>
+                  <img alt="button" src={btnSend} />
+                </button>
               </div>
             </form>
           </div>
           <Fade duration={3000}>
             <div className={classes.expressionSection}>
-              <img src={kattendingmeessage} alt="attending" />
+              <img src="https://res.cloudinary.com/dwvzfit8v/image/upload/v1661888194/Invitation%20Assets/Khitanan/icon_bqne57.webp" alt="attending" />
               <p className={classes.expression}>
-                Ungkapan terima kasih yang tulus dari kami apabila<br />
-                Bapak/Ibu/Teman-teman berkenan hadir dan memberikan do'a restu
+                <em>
+                  Ungkapan terima kasih yang tulus dari kami<br/>
+                  apabila Bapak/Ibu/Teman-teman<br/>
+                  berkenan hadir dan memberikan do'a
+                </em>
               </p>
             </div>
           </Fade>
@@ -695,22 +694,41 @@ const InvitationPage = () => {
     );
   };
 
+  const generateSeparatorSection = () => {
+    return (
+      <div className={classes.separatorGallery}>
+        <div className={classes.topSection}>
+          <div className={classes.topLeft}>
+            <img alt="gallery" src="https://res.cloudinary.com/dwvzfit8v/image/upload/v1661969598/Invitation%20Assets/Khitanan/top_cwrjjc.webp" />
+          </div>
+          <div className={classes.topRight}>
+            <img alt="gallery" src="https://res.cloudinary.com/dwvzfit8v/image/upload/v1661969598/Invitation%20Assets/Khitanan/bottom_bymnsa.webp" />
+          </div>
+        </div>
+        <div className={classes.bottomSection}>
+          <img alt="gallery" src="https://res.cloudinary.com/dwvzfit8v/image/upload/v1661965460/Invitation%20Assets/Khitanan/kidos_azamri.webp" />
+        </div>
+      </div>
+    )
+  }
+
   const generateMessageSection = () => {
     return (
       <div className={classes.messageSectionContainer}>
-        <div className={classes.sectionTitle}>
-          <p>Ucapan & Doa kamu</p>
+        <div className={classes.titleContainer}>
+          <div className={classes.sectionTitle}>
+            <p>Ucapan & Doa kamu</p>
+          </div>
         </div>
         <div className={classes.mainContent}>
           <Fade duration={3000}>
             <div className={classes.leftSection}>
-              <img src={gunungan} alt="gunungan" />
-              <p>“ Seutas Doa & Ucapan Untuk Kedua Mempelai ”</p>
+              <p>“ Sebuah Doa & Ucapan Untuk Muhammad Raffi Ramadhan ”</p>
             </div>
           </Fade>
           <div className={classes.rightSection}>
             <div className={classes.imgWrapper}>
-              <img className={classes.image} src={MessageImg} alt="message" />
+              <img className={classes.image} src="https://res.cloudinary.com/dwvzfit8v/image/upload/v1661888194/Invitation%20Assets/Khitanan/icon_bqne57.webp" alt="message" />
             </div>
             <div className={classes.messageWrapper}>
               {messages && messages.map((item, idx) => {
@@ -747,7 +765,7 @@ const InvitationPage = () => {
       <div className={classes.giftContainer}>
         <div className={classes.giftWraper}>
           <div className={classes.tittleRibbon}>
-            <p className={classes.titleGift}>"Hadiah Pernikahan"</p>
+            <p className={classes.titleGift}>"Hadiah Khitanan"</p>
             <img className={classes.ribbon} src={wingribbon} alt="wing" />
           </div>
           <div className={classes.dropdownSection} onClick={showGiftInfo}>
@@ -766,10 +784,10 @@ const InvitationPage = () => {
               </div>
             </div>
             <div className={classes.infoWrapper}>
-              <p className={classes.infoTitle}><strong>Alamat Pengiriman Hadiah Fisik</strong></p>
+              <p className={classes.infoTitle}><em>Alamat Pengiriman Hadiah Fisik</em></p>
               <p className={classes.infoDetail}>
-                Nama : Gilang Firdaus <br />
-                Alamat : Jl. Sambiroto VII RT.10 RW.02,<br />Tembalang, Semarang
+                Nama : Muhammad Raffi Ramadhan<br />
+                Alamat : Jl. Veteran No 14B RT/RW 09/06
               </p>
               <div className={classes.copyWraper}>
                 <img className={classes.copy} src={numbercopy} onClick={copyAddress} alt="copy-text" />
@@ -777,7 +795,9 @@ const InvitationPage = () => {
               </div>
             </div>
             <p className={classes.closingStatement}>
-              Silakan konfirmasi kirim hadiah spesial kamu
+              <em>
+                Silakan konfirmasi kirim hadiah spesial kamu
+              </em>
             </p>
             <div className={classes.btnConfirmation} onClick={handleConfirmation}>klik disini</div>
           </div>
@@ -792,12 +812,12 @@ const InvitationPage = () => {
         <Fade duration={3000}>
           <div className={classes.closingSentenceWrapper}>
             <p>
-              Bagi Kami Kehadiran & doa Anda<br /> merupakan keberkahan, kehormatan serta kebahagiaan.<br />
-              Dari hati yang terdalam, kami ucapkan terima kasih
+            Kesan yang mendalam akan terukir di hati kami,<br />serta diiringi ucapan terima kasih yang tulus, apabila<br /> Bapak/Ibu/Saudara/i berkenan hadir untuk<br /> memberikan do'a restu kepada putra kami.<br/>
+            Terima kasih
             </p>
+            <img src={ClosingWing} alt="wing" className={classes.image} />
           </div>
         </Fade>
-        <img src={ClosingWing} alt="wing" className={classes.image} />
       </div>
     );
   };
@@ -823,12 +843,12 @@ const InvitationPage = () => {
         {generateHeader()}
         {generateStory()}
         {generateSecondStory()}
-        {!isIOS ? secondImageSection() : iosSecondImageSection()}
+        {/* {!isIOS ? secondImageSection() : iosSecondImageSection()} */}
         {summarySection()}
         {generateBridesProfile()}
-        {!isIOS ? thirdImageSeparator() : iosThirdImageSeparator()}
         {eventDetail()}
         {attendingSection()}
+        {generateSeparatorSection()}
         {generateMessageSection()}
         {giftSection()}
         {closingSection()}
