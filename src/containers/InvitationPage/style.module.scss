@@ -4,7 +4,7 @@
   background-color: $color-black;
   overflow-x: hidden;
   .invitationContainer {
-    max-width: 360px;
+    max-width: 414px;
     @include directionY;
     @include content-center;
     .header {
@@ -315,19 +315,9 @@
     }
     .summary {
       @include directionX;
-      @include parallax;
-      background-image: url("../../static/images/story.png");
-      background-repeat: no-repeat;
-      -webkit-background-size: cover;
-      -moz-background-size: cover;
-      -o-background-size: cover;
-      background-size: cover;
-      object-fit: cover;
       border-top: 1px solid $color-gold;
       border-bottom: 1px solid $color-gold;
       @include apply-at-sm-md-size {
-        background-position: center center;
-        background-image: url("../../static/images/story-sm.png");
       }
       .bg {
         background-color: $color-black;
@@ -764,13 +754,26 @@
         }
       }
     }
-    .attendingContainer {
-      @include section-spacing;
-      @include parallax;
+    .secondBiographySection {
+      color: $color-mid-yellow-shadow;
+      text-align: center;
+      padding: 5%;
+      font-size: 12px;
+      margin: 0 2% 5%;
+      border-radius: 7px;
+      background-image: url("../../static/images/bio-bg.png");
       background-repeat: no-repeat;
       background-size: cover;
+    }
+    .attendingContainer {
+      @include usePoppins;
+      border-top: 1px solid $color-gold;
+      @include parallax;
+      color: $color-light-yellow-shadow;
       .title {
         @include body;
+        @include pacifico;
+        color: $color-mid-yellow-shadow;
         margin-top: 5%;
         margin-left: 15%;
         font-size: 30px;
@@ -786,14 +789,10 @@
       }
       .attendingWraper {
         width: 90%;
-        @include useMulish;
-        @include directionX;
         @include content-center;
         justify-content: space-between;
         margin-bottom: 5%;
-        @include apply-at-sm-md-size {
-          @include reverseDirectionY;
-        }
+        @include reverseDirectionY;
         .formWraper {
           .dropdownSection {
             width: 500px;
@@ -801,6 +800,7 @@
             justify-content: left;
             align-items: center;
             border-bottom: 1px solid $color-gold;
+            color: $color-mid-yellow-shadow;
             cursor: pointer;
             @include apply-at-sm-md-size {
               width: 100%;
@@ -808,10 +808,8 @@
             }
             .formTitle {
               margin-right: 40%;
-              font-size: 24px;
-              @include apply-at-sm-md-size {
-                font-size: 12px;
-              }
+              font-size: 12px;
+              color: $color-mid-yellow-shadow;
             }
             .icon {
               img {
@@ -823,50 +821,38 @@
           }
           .formContainer {
             .inputForm {
-              @include useMulish;
+              @include usePoppins;
               margin-top: 6%;
-              color: $color-gold;
               .inputs {
                 @include directionY;
                 font-size: 24px;
                 p {
-                  @include apply-at-sm-md-size {
-                    font-size: 12px;
-                  }
+                  font-size: 12px;
                 }
                 input {
-                  @include useMulish;
-                  color: $color-gold;
+                  color: $color-mid-yellow-shadow;
                   padding-left: 15px;
-                  width: 230px;
                   height: 40px;
                   margin-bottom: 5%;
-                  border-radius: 16px;
                   background-color: $color-black;
                   border: 1px solid $color-gold;
-                  @include apply-at-sm-md-size {
-                    width: 95%;
-                    border-radius: 10px;
-                    font-size: 11px;
-                  }
+                  width: 95%;
+                  border-radius: 10px;
+                  font-size: 11px;
                 }
                 textarea {
-                  @include useMulish;
-                  color: $color-gold;
-                  height: 90px;
+                  @include usePoppins;
+                  color: $color-mid-yellow-shadow;
                   padding-left: 15px;
                   padding-top: 30px;
-                  border-radius: 16px;
                   background-color: $color-black;
                   border: 1px solid $color-gold;
-                  @include apply-at-sm-md-size {
-                    font-size: 11px;
-                    height: 86px;
-                    border-radius: 10px;
-                  }
+                  font-size: 11px;
+                  height: 86px;
+                  border-radius: 10px;
                 }
                 ::-webkit-input-placeholder {
-                  color: $color-gold;
+                  color: $color-mid-yellow-shadow;
                 }
                 input:focus {
                   outline: none !important;
@@ -890,10 +876,10 @@
                     width: 30px;
                     height: 30px;
                     .mic {
-                      color: $color-gold; 
+                      color: $color-light-green; 
                       position: relative;
-                      width: 18px;
-                      height: 18px;
+                      width: 22px;
+                      height: 22px;
                       position: absolute;
                       z-index: 1000;
                     }
@@ -904,6 +890,7 @@
             .radiosInput {
               @include directionX;
               justify-content: space-between;
+              color: $color-mid-yellow-shadow;
               .inputs {
                 @include apply-at-sm-md-size {
                   @include directionY;
@@ -912,24 +899,15 @@
                   margin-top: 2%;
                 }
                 .radioWrapper {
-                  @include directionX;
                   width: 100%;
-                  @include apply-at-sm-md-size {
-                    @include directionY;
-                  }
+                  @include directionY;
                   .radioItem {
                     @include directionX;
-                    margin-right: 10px;
-                    @include apply-at-sm-md-size {
-                      @include directionX;
-                      align-items: center;
-                      margin: 2% 0;
-                    }
+                    align-items: center;
+                    margin: 2% 0;
                     label {
-                      @include apply-at-sm-md-size {
-                        font-size: 10px;
-                        margin-left: 5%;
-                      }
+                      font-size: 10px;
+                      margin-left: 5%;
                     }
                   }
                 }
@@ -937,20 +915,14 @@
               .btnSend {
                 align-self: flex-end;
                 font-weight: bold;
+                border: none;
                 cursor: pointer;
-                padding: 2%;
-                height: 40px;
-                border-radius: 10px;
-                color: $color-gold;
-                background-color: $color-black;
-                border: 1px solid $color-gold;
-                @include apply-at-sm-md-size {
-                  padding: 0 3%;
-                  height: 32px;
-                  font-size: 12px;
-                  border-radius: 6px;
-                  font-weight: normal;
-                }
+                padding: 0 3%;
+                height: 32px;
+                font-size: 12px;
+                border-radius: 16px;
+                font-weight: normal;
+                background-color: black;
               }
             }
           }
@@ -968,16 +940,12 @@
         .expressionSection {
           @include directionY;
           @include body;
+          color: $color-mid-yellow-shadow;
           justify-content: center;
           align-items: center;
-          @include apply-at-sm-md-size {
-            font-size: 14px;
-          }
+          font-size: 14px;
           img {
-            width: 269px;
-            @include apply-at-sm-md-size {
-              width: 155px;
-            }
+            width: 120px;
           }
           .expression {
             text-align: center;
@@ -985,54 +953,63 @@
         }
       }
     }
+    .separatorGallery {
+      border-bottom: 2px solid $color-gold;
+      .topSection {
+        @include directionX;
+        .topLeft {
+          align-self: flex-start;
+          img {
+            width: 100%;
+          }
+        }
+        .topRight {
+          margin-left: -25%;
+          margin-top: 30%;
+          img {
+            width: 100%;
+          }
+        }
+      }
+      .bottomSection {
+        margin-bottom: -2%;
+      }
+    }
     .messageSectionContainer {
-      @include section-spacing;
-      @include parallax;
-      background-image: url("../../static/images/message-bg.png");
-      background-repeat: no-repeat;
-      background-size: cover;
       padding-bottom: 2%;
-      .sectionTitle {
-        @include content-center;
-        text-align: center;
+      color: $color-mid-yellow-shadow;
+      .titleContainer {
         border-bottom: 1px solid $color-gold;
-        width: 20%;
-        font-size: 29px;
-        margin-bottom: 5%;
-        @include apply-at-sm-md-size {
+        .sectionTitle {
+          @include pacifico;
+          @include content-center;
+          text-align: center;
+          border-bottom: 1px solid $color-gold;
+          margin-bottom: 5%;
           font-size: 14px;
           width: 40%;
         }
       }
       .mainContent {
-        @include directionX;
         @include content-center;
+        text-align: center;
+        font-size: 12px;
         align-items: center;
         justify-content: space-between;
-        width: 90%;
-        @include apply-at-sm-md-size {
-          @include reverseDirectionY;
-          width: 100%;
-        }
+        @include reverseDirectionY;
+        width: 100%;
         .leftSection {
+          @include pacifico;
           @include directionY;
           align-items: center;
           width: 100%;
           margin-right: 3%;
           p {
-            font-size: 26px;
-            @include apply-at-sm-md-size {
-              font-size: 14px;
-            }
-          }
-          @include apply-at-sm-md-size {
-            width: 100%;
+            font-size: 13px;
           }
           img {
-            @include apply-at-sm-md-size {
-              width: 155px;
-              margin-top: 10%;
-            }
+            width: 155px;
+            margin-top: 10%;
           }
         }
         .rightSection {
@@ -1051,12 +1028,7 @@
             .image {
               @include directionX;
               @include content-center;
-              max-width: 570px;
-              // border: 1px solid $color-gold;
-              border-radius: 9px;
-              @include apply-at-sm-md-size {
-                width: 90%;
-              }
+              width: 30%;
             }
           }
           .messageWrapper {
@@ -1129,19 +1101,12 @@
                     width: 80%;
                   }
                   .name {
-                    font-size: 17px;
-                    margin-bottom: 1.5%;
-                    @include apply-at-sm-size {
-                      margin-bottom: 0.5rem;
-                      font-size: 12px;
-                    }
+                    margin-bottom: 0.5rem;
+                    font-size: 12px;
                   }
                   .message {
                     @include useMulish;
-                    font-size: 15px;
-                    @include apply-at-sm-size {
-                      font-size: 10px;
-                    }
+                    font-size: 11px;
                   }
                 }
               }
@@ -1152,6 +1117,7 @@
     }
     .giftContainer {
       @include section-spacing;
+      color: $color-mid-yellow-shadow;
       .giftWraper {
         width: 60%;
         @include apply-at-sm-md-size {
@@ -1160,18 +1126,15 @@
         @include content-center;
         .tittleRibbon {
           .titleGift {
-            width: 30%;
+            @include pacifico;
             @include content-center;
             text-align: center;
-            font-size: 30px;
-            border-bottom: 1px solid $color-gold;
-            @include apply-at-sm-md-size {
-              font-size: 16px;
-              width: 100%;
-              text-decoration-line: underline;
-              text-underline-offset: 12px;
-              border: none;
-            }
+            border-bottom: 1px solid $color-light-yellow-shadow;
+            font-size: 16px;
+            width: 100%;
+            text-decoration-line: underline;
+            text-underline-offset: 12px;
+            border: none;
           }
           .ribbon {
             display: flex;
@@ -1262,12 +1225,10 @@
               }
             }
             .infoDetail {
-              font-size: 18px;
               @include content-center;
               text-align: center;
-              @include apply-at-sm-md-size {
-                font-size: 12px;
-              }
+              font-size: 12px;
+              margin: 8% 0;
             }
             .copyWraper {
               position: relative;
@@ -1288,14 +1249,10 @@
               }
               .notifCopy {
                 position: absolute;
-                right: -110px;
-                top: 0;
-                @include apply-at-sm-md-size {
-                  font-size: 12px;
-                  left: 165px;
-                  top: -5px;
-                  right: 50px;
-                }
+                font-size: 12px;
+                left: 185px;
+                top: -5px;
+                right: 50px;
               }
             }
           }
@@ -1307,21 +1264,15 @@
             margin-bottom: 5%;
             @include content-center;
             .copy {
-              @include apply-at-sm-md-size {
-                width: 70px;
-              }
+              width: 70px;
               position: absolute;
-              width: 115px;
               cursor: pointer;
             }
             .notifCopy {
               position: absolute;
               text-align: center;
-              left: 75px;
-              @include apply-at-sm-md-size {
-                font-size: 12px;
-                left: 50px;
-              }
+              font-size: 12px;
+              left: 50px;
             }
           }
 
@@ -1364,27 +1315,22 @@
     }
     .closingSectionContainer {
       @include directionY;
+      color: $color-mid-yellow-shadow;
       justify-content: center;
       align-items: center;
-      background-image: url("../../static/images/closing-bg.png");
-      background-repeat: no-repeat;
-      background-size: cover;
       text-align: center;
       border-bottom: 1px solid $color-gold;
+      padding: 3% 2%;
       .closingSentenceWrapper {
-        @include content-center;
-        font-size: 30px;
+        border-radius: 30px;
+        background-image: url("../../static/images/closing-bg.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        font-size: 12px;
         width: 100%;
-        margin-bottom: -25px;
-        @include apply-at-sm-md-size {
-          font-size: 14px;
-          width: 100%;
-          padding-top: 5%;
-          margin-bottom: 0;
-        }
-      }
-      .image {
-        @include apply-at-sm-md-size {
+        padding-top: 5%;
+        margin-bottom: 0;
+        .image {
           width: 147px;
           margin-bottom: 5%;
         }
