@@ -29,11 +29,11 @@ import PopupVoiceRecognition from '../../components/PopupVoiceRecog';
 // import ksection2 from '../../static/images/ksection2.png';
 // import ksection3 from '../../static/images/ksection3.png';
 // import ksection31 from '../../static/images/ksection31.png';
-import Male from '../../static/images/male.png';
-import Female from '../../static/images/female.png';
+// import Male from '../../static/images/male.png';
+// import Female from '../../static/images/female.png';
 import WingTop from '../../static/images/wing-top.png';
 import WingBottom from '../../static/images/wing-bottom.png';
-import topevent from '../../static/images/topevent.png';
+// import topevent from '../../static/images/topevent.png';
 import kattendingmeessage from '../../static/images/kattendingmeessage.png';
 import gunungan from '../../static/images/gunungan.png';
 import MessageImg from '../../static/images/kgreetingsection.png';
@@ -64,6 +64,7 @@ const thirdimg = 'https://res.cloudinary.com/dwvzfit8v/image/upload/v1661879541/
 const boy = 'https://res.cloudinary.com/dwvzfit8v/image/upload/v1661888194/Invitation%20Assets/Khitanan/icon_bqne57.webp';
 const hadist = 'https://res.cloudinary.com/dwvzfit8v/image/upload/v1661888194/Invitation%20Assets/Khitanan/%D8%B9%D9%8E%D9%86%D9%92-%D8%A7%D9%8E%D8%A8%D9%90%D9%89-%D9%87%D9%8F%D8%B1%D9%8E%D9%8A%D9%92%D8%B1%D9%8E%D8%A9%D9%8E-%D8%B1%D8%B6-%D8%B9%D9%8E%D9%86%D9%90-%D8%A7%D9%84%D9%86%D9%8E%D9%91%D8%A8%D9%90%D9%8A%D9%91-%D8%B5-%D9%82%D9%8E%D8%A7%D9%84%D9%8E_-%D8%A7%D9%8E%D9%84%D9%92%D9%81%D9%90%D8%B7%D9%92%D8%B1%D9%8E%D8%A9%D9%8F-%D8%AE%D9%8E%D9%85%D9%92%D8%B3%D9%8C_-%D8%A7%D9%8E%D9%84%D9%92%D8%AE%D9%90%D8%AA%D9%8E%D8%A7%D9%86%D9%8F-%D9%88%D9%8E-%D8%A7%D9%92%D9%84%D8%A7%D9%90%D8%B3%D9%92%D8%AA%D9%90%D8%AD%D9%92%D8%AF%D9%8E%D8%A7%D8%AF_ugoevk.webp';
 const bride = 'https://res.cloudinary.com/dwvzfit8v/image/upload/v1661963046/Invitation%20Assets/Khitanan/bride_jsf3hu.webp';
+const scissor = 'https://res.cloudinary.com/dwvzfit8v/image/upload/v1661965340/Invitation%20Assets/Khitanan/gunting_lgiyw2.webp';
 
 const InvitationPage = () => {
   const [isInvitationOpen, setIsInvitationOpen] = useState(false);
@@ -352,7 +353,7 @@ const InvitationPage = () => {
   };
 
   const goToMaps = () => {
-    window.open('https://goo.gl/maps/E3guzxp6gxcionVJ6', '_blank');
+    window.open('https://goo.gl/maps/B7cNogghJemQvZBN7', '_blank');
   };
 
   const radioAttend = (e) => {
@@ -398,6 +399,9 @@ const InvitationPage = () => {
     return (
       <div className={classes.storySection}>
         <div className={classes.storyWrapper}>
+          <div className={classes.imageWrapper}>
+            <img src={secondimg} alt='Brides' />
+          </div>
           <div className={classes.story}>
             <Fade when={!showPopupProkes} left duration={3000}>
               <p>Jalan - jalan kepantai bersama pacar <br/>
@@ -407,9 +411,6 @@ const InvitationPage = () => {
               </p>
             </Fade>
           </div>
-        </div>
-        <div className={classes.imageWrapper}>
-          <img src={secondimg} alt='Brides' />
         </div>
       </div>
     );
@@ -514,8 +515,8 @@ const InvitationPage = () => {
             <div className={classes.card}>
               <img className={classes.bridesImage} src={bride} alt="brides" />
               <div className={classes.profileInfo}>
-                <p className={classes.bridess}>Vina Fajarwati</p>
-                <p className={classes.parents}>Putri Terakhir dari{width === 'lg' && <br />} Bapak Sudirjan (Alm) & Ibu Jariyah</p>
+                <p className={classes.bridess}>Muhammad Raffi Ramadhan<br />(Raffi)<br />Jakarta, 05 Juli 2014<br />anak ke 2 dari 2 bersaudara</p>
+                {/* <p className={classes.parents}></p> */}
               </div>
             </div>
           </Fade>
@@ -540,32 +541,34 @@ const InvitationPage = () => {
     return (
       <div className={classes.event}>
         <Fade delay={1000} duration={4000}>
-          <img className={classes.topEvent} src={topevent} alt='top' />
+          <img className={classes.topEvent} src={scissor} alt='top' />
           <div className={classes.greeting}>
-            <p>
+            <p className={classes.kindly}>
               Assalamu'alaikum Warahmatullahi Wabarakatuh<br />
             </p>
             <p className={classes.subtitle}>
-              Maha Suci Allah {width !== 'lg' && <br />} yang telah menciptakan makhluk-Nya berpasang-pasangan. <br />
-              Ya Allah semoga ridho-Mu tercurah mengiringi pernikahan kami
+            Dengan memohon Rahmat dan Ridho Allah SWT<br />
+            kami mengundang Bapak/Ibu, Saudara/i untuk<br />
+            menghadiri resepsi syukuran khitan putra kami, yang<br /> 
+            insya Allah akan diselenggarakan pada :
             </p>
           </div>
           <div className={classes.details}>
-            <div className={classes.titleWraper}>
-              <p className={classes.title}>AKAD & RESEPSI</p>
-            </div>
+            {/* <div className={classes.titleWraper}> */}
+              {/* <p className={classes.title}>AKAD & RESEPSI</p> */}
+            {/* </div> */}
             <div className={classes.calender}>
               <img src={calender} alt='calender' />
               <p>
-                MINGGU, 17 JULI 2022
+                Sabtu, 3 September 2022
               </p>
             </div>
             <div className={classes.timesWraper}>
-              {width === 'lg' ? (
+              {/* {width === 'lg' ? (
                 <>
                   <div className={classes.time}>
                     <img src={time} alt='time' />
-                    <p>AKAD : PUKUL 09.00 WIB</p>
+                    <p>13:00 s/d 16:00 WIB</p>
                   </div>
                   <div className={classes.time}>
                     <img src={time} alt='time' />
@@ -574,16 +577,16 @@ const InvitationPage = () => {
                     </p>
                   </div>
                 </>
-              ) : (
+              ) : ( */}
                 <>
                   <div className={classes.timeMobileWrapper}>
                     <img src={time} alt='time' />
-                    <p>AKAD 09.00 WIB</p>
+                    <p>13:00 s/d 16:00 WIB</p>
                     <div className={classes.separator} />
-                    <p>RESEPSI 10.00 WIB - SELESAI</p>
+                    {/* <p>RESEPSI 10.00 WIB - SELESAI</p> */}
                   </div>
                 </>
-              )}
+              {/* )} */}
             </div>
             <div className={classes.btnCalendarContainer}>
               <div className={classes.btnCalendarWrapper} onClick={addEvent}>
@@ -593,7 +596,7 @@ const InvitationPage = () => {
             <div className={classes.locationWraper}>
               <img src={Location} alt='location' />
               <p>
-                JL. SAMBIROTO VII RT.10 RW.02 KEC.TEMBALANG KOTA SEMARANG
+                JL. H. Ibrahim No.28, RW 05, Duren Tiga, Kec. Pancoran,<br />Jakarta Selatan
               </p>
             </div>
             <div onClick={goToMaps} className={classes.btnmap}>
@@ -823,8 +826,8 @@ const InvitationPage = () => {
         {!isIOS ? secondImageSection() : iosSecondImageSection()}
         {summarySection()}
         {generateBridesProfile()}
-        {eventDetail()}
         {!isIOS ? thirdImageSeparator() : iosThirdImageSeparator()}
+        {eventDetail()}
         {attendingSection()}
         {generateMessageSection()}
         {giftSection()}
