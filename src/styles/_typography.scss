@@ -4,12 +4,12 @@
   font-weight: normal;
   src: url("../static/fonts/consolas.ttf") format("truetype");
 }
-@mixin mainText {
-  font-family: 'Poppins';
-}
 @mixin body {
-  font-family: "Charm", cursive;
+  font-family: 'Poppins', sans-serif;
   color: $color-gold;
+}
+@mixin pacifico {
+  font-family: 'Pacifico', cursive;
 }
 @mixin useDancing {
   font-family: 'Dancing Script', cursive;
