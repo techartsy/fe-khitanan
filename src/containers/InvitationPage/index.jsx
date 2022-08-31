@@ -63,6 +63,7 @@ const secondimg = 'https://res.cloudinary.com/dwvzfit8v/image/upload/v1661876834
 const thirdimg = 'https://res.cloudinary.com/dwvzfit8v/image/upload/v1661879541/Invitation%20Assets/Khitanan/1-khitan-3_nkaahh.webp';
 const boy = 'https://res.cloudinary.com/dwvzfit8v/image/upload/v1661888194/Invitation%20Assets/Khitanan/icon_bqne57.webp';
 const hadist = 'https://res.cloudinary.com/dwvzfit8v/image/upload/v1661888194/Invitation%20Assets/Khitanan/%D8%B9%D9%8E%D9%86%D9%92-%D8%A7%D9%8E%D8%A8%D9%90%D9%89-%D9%87%D9%8F%D8%B1%D9%8E%D9%8A%D9%92%D8%B1%D9%8E%D8%A9%D9%8E-%D8%B1%D8%B6-%D8%B9%D9%8E%D9%86%D9%90-%D8%A7%D9%84%D9%86%D9%8E%D9%91%D8%A8%D9%90%D9%8A%D9%91-%D8%B5-%D9%82%D9%8E%D8%A7%D9%84%D9%8E_-%D8%A7%D9%8E%D9%84%D9%92%D9%81%D9%90%D8%B7%D9%92%D8%B1%D9%8E%D8%A9%D9%8F-%D8%AE%D9%8E%D9%85%D9%92%D8%B3%D9%8C_-%D8%A7%D9%8E%D9%84%D9%92%D8%AE%D9%90%D8%AA%D9%8E%D8%A7%D9%86%D9%8F-%D9%88%D9%8E-%D8%A7%D9%92%D9%84%D8%A7%D9%90%D8%B3%D9%92%D8%AA%D9%90%D8%AD%D9%92%D8%AF%D9%8E%D8%A7%D8%AF_ugoevk.webp';
+const bride = 'https://res.cloudinary.com/dwvzfit8v/image/upload/v1661963046/Invitation%20Assets/Khitanan/bride_jsf3hu.webp';
 
 const InvitationPage = () => {
   const [isInvitationOpen, setIsInvitationOpen] = useState(false);
@@ -509,16 +510,16 @@ const InvitationPage = () => {
           <img className={classes.image} src={WingTop} alt="wing" />
         </div>
         <div className={classes.profileWrapper}>
-          <Fade left duration={3000}>
+          <Fade right duration={3000}>
             <div className={classes.card}>
-              <img className={classes.bridesImage} src={Female} alt="brides" />
+              <img className={classes.bridesImage} src={bride} alt="brides" />
               <div className={classes.profileInfo}>
                 <p className={classes.bridess}>Vina Fajarwati</p>
                 <p className={classes.parents}>Putri Terakhir dari{width === 'lg' && <br />} Bapak Sudirjan (Alm) & Ibu Jariyah</p>
               </div>
             </div>
           </Fade>
-          <Fade right duration={3000}>
+          {/* <Fade right duration={3000}>
             <div className={classes.card}>
               <img className={classes.bridesImage} src={Male} alt="brides" />
               <div className={classes.profileInfo}>
@@ -526,7 +527,7 @@ const InvitationPage = () => {
                 <p className={classes.parents}>Putra Pertama dari{width === 'lg' && <br />} Bapak Dani Hidayat & Ibu Fera</p>
               </div>
             </div>
-          </Fade>
+          </Fade> */}
         </div>
         <div className={classes.wingWrapper}>
           <img className={classes.image} src={WingBottom} alt="wing" />
